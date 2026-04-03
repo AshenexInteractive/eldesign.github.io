@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldesign – Produktutvikling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           ELDESIGN MINIMAL - Clean & Modern
+           ============================================ */
+
+        :root {
+            --white: #ffffff;
+            --off-white: #fafafa;
+            --gray-50: #f7f7f8;
+            --gray-100: #eeeff1;
+            --gray-200: #d9dbe0;
+            --gray-300: #b4b8c1;
+            --gray-400: #8b90a0;
+            --gray-500: #6b7084;
+            --gray-600: #4a4e5e;
+            --gray-800: #1e2030;
+            --gray-900: #111222;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --accent-hover: #1d4ed8;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Nav --- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.5rem 0;
+            transition: all 0.4s ease;
+        }
+
+        .nav--scrolled {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--gray-100);
+            padding: 1rem 0;
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav__logo {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            letter-spacing: -0.02em;
+        }
+
+        .nav__logo span {
+            color: var(--accent);
+        }
+
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav__link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--gray-500);
+            transition: color 0.2s ease;
+        }
+
+        .nav__link:hover {
+            color: var(--gray-900);
+        }
+
+        .nav__cta {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--white);
+            background: var(--gray-900);
+            padding: 0.6rem 1.5rem;
+            border-radius: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .nav__cta:hover {
+            background: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .nav__toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .nav__toggle span {
+            display: block;
+            width: 20px;
+            height: 1.5px;
+            background: var(--gray-800);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 6rem;
+            position: relative;
+        }
+
+        .hero__layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero__tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.2s forwards;
+        }
+
+        .hero__tag-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.35s forwards;
+        }
+
+        .hero__title em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .hero__desc {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+            max-width: 440px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.5s forwards;
+        }
+
+        .hero__actions {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.65s forwards;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.85rem 2rem;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn--primary {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .btn--primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn--ghost {
+            background: transparent;
+            color: var(--gray-600);
+            border: 1.5px solid var(--gray-200);
+        }
+
+        .btn--ghost:hover {
+            border-color: var(--gray-800);
+            color: var(--gray-900);
+        }
+
+        .btn__arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .btn:hover .btn__arrow {
+            transform: translateX(3px);
+        }
+
+        /* Hero Visual */
+        .hero__visual {
+            position: relative;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.5s forwards;
+        }
+
+        .hero__card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero__card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: 14px;
+            padding: 1.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .stat-box__number {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box__number span {
+            color: var(--accent);
+        }
+
+        .stat-box__label {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero__floating-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero__floating-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .hero__floating-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        /* --- Services --- */
+        .services {
+            padding: 7rem 0;
+            background: var(--gray-50);
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.12;
+            letter-spacing: -0.02em;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--gray-500);
+            max-width: 500px;
+            line-height: 1.7;
+        }
+
+        .services__header {
+            margin-bottom: 4rem;
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: default;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .service-card__icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            color: var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-card__icon {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .service-card__title {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card__desc {
+            font-size: 0.88rem;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        /* --- About Strip --- */
+        .about-strip {
+            padding: 7rem 0;
+        }
+
+        .about-strip__layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-strip__visual {
+            position: relative;
+        }
+
+        .about-strip__card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .about-strip__avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 auto 1.25rem;
+        }
+
+        .about-strip__name {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+
+        .about-strip__role {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-strip__bio {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            line-height: 1.7;
+        }
+
+        .about-strip__text .section-desc {
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .vision-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            border-radius: 14px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .vision-card:hover {
+            border-color: var(--accent-light);
+        }
+
+        .vision-card__title {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-card__text {
+            font-size: 0.88rem;
+            color: var(--gray-500);
+            line-height: 1.65;
+        }
+
+        /* --- Contact --- */
+        .contact {
+            padding: 7rem 0;
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .contact .section-label {
+            color: var(--accent-light);
+        }
+
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact .section-desc {
+            color: var(--gray-300);
+        }
+
+        .contact__layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .contact__info-items {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact__info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--gray-300);
+        }
+
+        .contact__info-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent-light);
+        }
+
+        .contact__form {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: var(--accent);
+        }
+
+        .form-input::placeholder {
+            color: var(--gray-500);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact__form .btn--primary {
+            width: 100%;
+            justify-content: center;
+            background: var(--accent);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .contact__form .btn--primary:hover {
+            background: var(--accent-hover);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .footer__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer__copy {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal--visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 1024px) {
+            .hero__layout,
+            .about-strip__layout,
+            .contact__layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav__links { display: none; }
+            .nav__toggle { display: block; }
+
+            .services__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 7rem 0 4rem;
+            }
+
+            .footer__inner {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="container nav__inner">
+            <a href="#" class="nav__logo">el<span>design</span></a>
+            <button class="nav__toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links">
+                <li><a href="#tjenester" class="nav__link">Tjenester</a></li>
+                <li><a href="#om" class="nav__link">Om Oss</a></li>
+                <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+                <li><a href="#kontakt" class="nav__cta">Snakk med oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero__layout">
+            <div class="hero__content">
+                <div class="hero__tag">
+                    <span class="hero__tag-dot"></span>
+                    Produktutvikling & Elektronikk
+                </div>
+                <h1 class="hero__title">Vi skaper<br>morgendagens<br><em>teknologi</em></h1>
+                <p class="hero__desc">Fra ide til ferdig produkt. Eldesign velger losninger som gir kostnadseffektiv produksjon til riktig kvalitet.</p>
+                <div class="hero__actions">
+                    <a href="#kontakt" class="btn btn--primary">
+                        Kontakt oss <span class="btn__arrow">&#8594;</span>
+                    </a>
+                    <a href="#tjenester" class="btn btn--ghost">
+                        Se tjenester
+                    </a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__card">
+                    <div class="hero__card-grid">
+                        <div class="stat-box">
+                            <div class="stat-box__number">5<span>+</span></div>
+                            <div class="stat-box__label">Ars erfaring</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box__number">6</div>
+                            <div class="stat-box__label">Tjenester</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box__number">3</div>
+                            <div class="stat-box__label">Sektorer</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box__number">IOT</div>
+                            <div class="stat-box__label">Teknologi</div>
+                        </div>
+                    </div>
+                    <div class="hero__floating-badge">
+                        <span class="hero__floating-dot"></span>
+                        <span class="hero__floating-text">Hele Norge</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="tjenester">
+        <div class="container">
+            <div class="services__header reveal">
+                <div class="section-label">Tjenester</div>
+                <h2 class="section-title">Alt du trenger for<br>produktutvikling</h2>
+                <p class="section-desc">Vi tilbyr administrerte og profesjonelle tjenester som fokuserer pa a matche kundens krav til innovative teknologier.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M8 12l3 3 5-5"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Elektronikkprodukter</h3>
+                    <p class="service-card__desc">Design av spesialtilpasset elektronikkprodukter</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Prototype & Sertifisering</h3>
+                    <p class="service-card__desc">Prototypeproduksjon og produktsertifisering</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="6" height="10" rx="1"/><rect x="9" y="7" width="6" height="10" rx="1"/><rect x="16" y="7" width="6" height="10" rx="1"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Smaserieproduksjon</h3>
+                    <p class="service-card__desc">Smaserieproduksjon av elektronikkenheter</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Radgiving</h3>
+                    <p class="service-card__desc">Radgiving og tilrettelegging for serieproduksjon</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Kartlegging</h3>
+                    <p class="service-card__desc">Identifisering og kartlegging av maskiner og styringer</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l6-6M3 10l6-6M21 10l-6 6M21 21l-6-6"/><path d="M12 3v18"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Mapping</h3>
+                    <p class="service-card__desc">Utarbeidelse av produktkrav og spesifikasjon av losninger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-strip" id="om">
+        <div class="container about-strip__layout">
+            <div class="about-strip__visual">
+                <div class="about-strip__card reveal">
+                    <div class="about-strip__avatar">TS</div>
+                    <h3 class="about-strip__name">Tommy Smith</h3>
+                    <p class="about-strip__role">Mekatronikkingeniør</p>
+                    <p class="about-strip__bio">Mekatronikkingeniør med bred teknisk kompetanse. Mer enn 5 ars erfaring med IOT teknologi og medgrunder i et oppstartsselskap. Hovedfokuset er a bista industrien i den pagaende digitale transformasjonen.</p>
+                </div>
+            </div>
+            <div class="about-strip__text">
+                <div class="section-label reveal">Om Oss</div>
+                <h2 class="section-title reveal">Visjon &<br>misjon</h2>
+                <div class="vision-cards">
+                    <div class="vision-card reveal">
+                        <h4 class="vision-card__title">Visjon</h4>
+                        <p class="vision-card__text">Var visjon er a bli det forste stedet folk tenker pa nar de har en ny produktide. Vart mal er a skape verdier og utvikle baerekraftige produkter.</p>
+                    </div>
+                    <div class="vision-card reveal">
+                        <h4 class="vision-card__title">Misjon</h4>
+                        <p class="vision-card__text">Eldesign produserer innovative, problemlosende, produserbare og unike produkter for et bredt spekter av kunder, fra nystartede grundere til globale selskaper.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="kontakt">
+        <div class="container contact__layout">
+            <div class="contact__info">
+                <div class="section-label reveal">Kontakt</div>
+                <h2 class="section-title reveal">La oss snakke<br>om ditt prosjekt</h2>
+                <p class="section-desc reveal">Ta kontakt med oss i dag for et uforpliktende tilbud. Vi er klare til a hjelpe deg.</p>
+                <div class="contact__info-items reveal">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                        </div>
+                        kontakt@eldesign.io
+                    </div>
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        Norge
+                    </div>
+                </div>
+            </div>
+            <form class="contact__form reveal" id="contact-form">
+                <div class="form-group">
+                    <label class="form-label" for="name">Navn</label>
+                    <input class="form-input" type="text" id="name" placeholder="Ditt navn">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">E-post</label>
+                    <input class="form-input" type="email" id="email" placeholder="din@epost.no">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Melding</label>
+                    <textarea class="form-input" id="message" placeholder="Fortell oss om prosjektet ditt..."></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">Send melding <span class="btn__arrow">&#8594;</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <a href="#" class="nav__logo">el<span style="color: var(--accent);">design</span></a>
+            <p class="footer__copy">&copy; 2026 Eldesign. Alle rettigheter reservert.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 40);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const t = document.querySelector(a.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('reveal--visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Form
+        document.getElementById('contact-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn');
+            btn.textContent = 'Sendt!';
+            btn.style.background = '#22c55e';
+            setTimeout(() => { btn.innerHTML = 'Send melding <span class="btn__arrow">&#8594;</span>'; btn.style.background = ''; e.target.reset(); }, 2500);
+        });
+    </script>
+</body>
+</html>
