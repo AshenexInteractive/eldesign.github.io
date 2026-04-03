@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type LSI – Bryterstillingsindikator – Eldesign</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="circuit-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav nav--scrolled" id="nav">
+        <div class="nav__container">
+            <a href="../index.html" class="nav__logo">
+                <span class="nav__logo-icon">⚡</span>
+                <span class="nav__logo-text">eldesign</span>
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="../index.html#tjenester" class="nav__link">Tjenester</a></li>
+                <li><a href="../index.html#konsulent" class="nav__link">Konsulent</a></li>
+                <li><a href="index.html" class="nav__link" style="color: var(--accent);">Produkter</a></li>
+                <li><a href="../index.html#om-oss" class="nav__link">Om Oss</a></li>
+                <li><a href="../index.html#kontakt" class="nav__link nav__link--cta">Kontakt Oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Header -->
+    <section class="page-header">
+        <div class="page-header__grid-overlay"></div>
+        <div class="section__container">
+            <div class="page-header__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    <span class="hero__badge-text">Indikator</span>
+                </div>
+                <h1 class="page-header__title">Bryterstillingsindikator</h1>
+                <p class="page-header__desc">Type LSI</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Hjem</a>
+                    <span class="breadcrumb__sep">→</span>
+                    <a href="index.html">Produkter</a>
+                    <span class="breadcrumb__sep">→</span>
+                    <span class="breadcrumb__current">Type LSI</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="section__container">
+            <div class="product-detail__layout">
+                <!-- Product Visual -->
+                <div class="product-detail__visual">
+                    <div class="product-visual-box">
+                        <div class="product-visual-box__icon">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="32" cy="32" r="24"/>
+                                <circle cx="32" cy="32" r="16"/>
+                                <line x1="32" y1="16" x2="32" y2="48" stroke-width="2"/>
+                                <circle cx="32" cy="20" r="2" fill="currentColor"/>
+                                <circle cx="32" cy="28" r="2" fill="currentColor"/>
+                                <circle cx="32" cy="36" r="2" fill="currentColor"/>
+                                <circle cx="32" cy="44" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="product-visual-box__grid"></div>
+                        <div class="product-visual-box__badge">Indikator</div>
+                        <!-- LED indicator animation -->
+                        <div class="lsi-indicator">
+                            <div class="lsi-led lsi-led--green lsi-led--1"></div>
+                            <div class="lsi-led lsi-led--green lsi-led--2"></div>
+                            <div class="lsi-led lsi-led--green lsi-led--3"></div>
+                            <div class="lsi-led lsi-led--green lsi-led--4"></div>
+                            <div class="lsi-led lsi-led--green lsi-led--5"></div>
+                        </div>
+                    </div>
+                    <div class="product-discount-badge">
+                        <span class="product-discount-badge__value">45%</span>
+                        <span class="product-discount-badge__label">RABATT</span>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail__info">
+                    <span class="section__tag">Bryterstillingsindikator</span>
+                    <h2 class="section__title">Type LSI</h2>
+                    <div class="section__line"></div>
+
+                    <p class="product-detail__hero-desc">
+                        Indikatoren brukes i tavler og styreskap for å vise bryterposisjoner, ventilposisjoner osv. for enkel avlesning.
+                    </p>
+
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <span class="product-feature__check">&#10003;</span>
+                            <span>Svært lang driftstid</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature__check">&#10003;</span>
+                            <span>Enkel montering</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature__check">&#10003;</span>
+                            <span>Avlesning fra vid vinkel</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature__check">&#10003;</span>
+                            <span>Pålitelig lesing på lang avstand</span>
+                        </div>
+                        <div class="product-feature product-feature--highlight">
+                            <span class="product-feature__star">&#9733;</span>
+                            <span>Spar plass og installasjon: Kombiner to lamper i en</span>
+                        </div>
+                    </div>
+
+                    <a href="../index.html#kontakt" class="btn btn--primary">
+                        <span class="btn__text">Be om Tilbud</span>
+                        <span class="btn__icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Description -->
+    <section class="product-tech">
+        <div class="section__container">
+            <div class="section__header">
+                <span class="section__number">01</span>
+                <span class="section__tag">Teknisk</span>
+                <h2 class="section__title">Beskrivelse</h2>
+                <div class="section__line"></div>
+            </div>
+
+            <div class="tech-blocks">
+                <div class="tech-block">
+                    <h3 class="tech-block__label">Oppbygging</h3>
+                    <p class="tech-block__text">Indikatoren består av to lysrekker, den ene viser vertikal og den andre viser horisontal retning.</p>
+                </div>
+                <div class="tech-block tech-block--green">
+                    <h3 class="tech-block__label">Grønn vertikal rekke</h3>
+                    <p class="tech-block__text">LED's viser bryter etc. i: <strong>På-posisjon</strong></p>
+                </div>
+                <div class="tech-block tech-block--red">
+                    <h3 class="tech-block__label">Rød horisontal rekke</h3>
+                    <p class="tech-block__text">LED's viser bryter etc. i: <strong>Av-posisjon</strong></p>
+                </div>
+            </div>
+
+            <div class="tech-callout">
+                <h3 class="tech-callout__title">Andre opplysninger</h3>
+                <p class="tech-callout__text">Indikatoren blir levert i standard rund utførelse. Løs firkantfront medfølger for effektbryter. Andre farger og kombinasjoner av lysrekkene kan bli levert på forespørsel. Det grønne eller røde lyset viser bryterposisjoner på en måte som gjør det mulig å avlese bryterposisjoner på 20 meters avstand og i en vinkel på ± 45°.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section class="product-specs">
+        <div class="section__container">
+            <div class="specs-dual">
+                <div class="specs-column">
+                    <div class="section__header">
+                        <span class="section__number">02</span>
+                        <span class="section__tag">Elektrisk</span>
+                        <h2 class="section__title" style="font-size: 1.5rem;">Elektriske Spesifikasjoner</h2>
+                        <div class="section__line"></div>
+                    </div>
+                    <div class="specs-table">
+                        <div class="specs-row">
+                            <span class="specs-row__label">Spenningstype</span>
+                            <span class="specs-row__value">Veksel eller likespenning</span>
+                        </div>
+                        <div class="specs-row">
+                            <span class="specs-row__label">Tilgjengelig tilførsel</span>
+                            <span class="specs-row__value">24V / 110V / 230V ac/dc</span>
+                        </div>
+                        <div class="specs-row">
+                            <span class="specs-row__label">Strømforbruk</span>
+                            <span class="specs-row__value">&lt; 10mA i det spesifiserte spenningsområde</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-column">
+                    <div class="section__header">
+                        <span class="section__number">03</span>
+                        <span class="section__tag">Mekanisk</span>
+                        <h2 class="section__title" style="font-size: 1.5rem;">Mekaniske Spesifikasjoner</h2>
+                        <div class="section__line"></div>
+                    </div>
+                    <div class="specs-table">
+                        <div class="specs-row">
+                            <span class="specs-row__label">Arbeidstemperatur</span>
+                            <span class="specs-row__value">-40 til +70°C</span>
+                        </div>
+                        <div class="specs-row">
+                            <span class="specs-row__label">Sokkel</span>
+                            <span class="specs-row__value">Pluggbar med 3 skrutilkoplinger</span>
+                        </div>
+                        <div class="specs-row">
+                            <span class="specs-row__label">LED farger</span>
+                            <span class="specs-row__value">Andre farger på forespørsel</span>
+                        </div>
+                        <div class="specs-row">
+                            <span class="specs-row__label">Kapsling</span>
+                            <span class="specs-row__value">IP67 (front)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Info -->
+    <section class="product-order">
+        <div class="section__container">
+            <div class="section__header">
+                <span class="section__number">04</span>
+                <span class="section__tag">Bestilling</span>
+                <h2 class="section__title">Ordreinformasjon</h2>
+                <div class="section__line"></div>
+            </div>
+
+            <div class="order-configurator">
+                <div class="order-config-group">
+                    <h3 class="order-config-group__title">Spenning</h3>
+                    <div class="order-table">
+                        <div class="order-table__header order-table__header--2col">
+                            <span>Kode</span>
+                            <span>Beskrivelse</span>
+                        </div>
+                        <div class="order-table__row order-table__row--2col">
+                            <span class="order-table__code">LSI-24</span>
+                            <span>24 V ac/dc</span>
+                        </div>
+                        <div class="order-table__row order-table__row--2col">
+                            <span class="order-table__code">LSI-110</span>
+                            <span>110 V ac/dc</span>
+                        </div>
+                        <div class="order-table__row order-table__row--2col">
+                            <span class="order-table__code">LSI-230</span>
+                            <span>230 V ac/dc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-config-group">
+                    <h3 class="order-config-group__title">Tilbehør</h3>
+                    <div class="order-table">
+                        <div class="order-table__header order-table__header--2col">
+                            <span>Kode</span>
+                            <span>Beskrivelse</span>
+                        </div>
+                        <div class="order-table__row order-table__row--2col">
+                            <span class="order-table__code">SQ</span>
+                            <span>Square frame</span>
+                        </div>
+                        <div class="order-table__row order-table__row--2col">
+                            <span class="order-table__code">SH</span>
+                            <span>Sign holder</span>
+                        </div>
+                        <div class="order-table__row order-table__row--2col">
+                            <span class="order-table__code">N</span>
+                            <span>None</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-config-group">
+                    <h3 class="order-config-group__title">LED Farger</h3>
+                    <div class="order-colors">
+                        <div class="order-color-col">
+                            <h4 class="order-color-col__title">Vertikal (Standard: Grønn)</h4>
+                            <div class="order-table">
+                                <div class="order-table__row order-table__row--2col">
+                                    <span class="order-table__code">G</span>
+                                    <span>Green Color</span>
+                                </div>
+                                <div class="order-table__row order-table__row--2col">
+                                    <span class="order-table__code">C1</span>
+                                    <span>Custom Color 1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-color-col">
+                            <h4 class="order-color-col__title">Horisontal (Standard: Rød)</h4>
+                            <div class="order-table">
+                                <div class="order-table__row order-table__row--2col">
+                                    <span class="order-table__code">R</span>
+                                    <span>Red Color</span>
+                                </div>
+                                <div class="order-table__row order-table__row--2col">
+                                    <span class="order-table__code">C2</span>
+                                    <span>Custom Color 2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-cta">
+                <p>For bestillinger eller ytterligere spørsmål, vennligst send en e-post til <a href="mailto:eldesign@online.no" class="link--accent">eldesign@online.no</a> eller ring oss på <a href="tel:+4791332599" class="link--accent">913 32 599</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Products -->
+    <section class="other-products">
+        <div class="section__container">
+            <div class="section__header section__header--center">
+                <span class="section__tag">Se også</span>
+                <h2 class="section__title">Andre Produkter</h2>
+                <div class="section__line section__line--center"></div>
+            </div>
+            <div class="products-grid products-grid--small" id="other-products-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="nav__logo-icon">⚡</span>
+                    <span class="nav__logo-text">eldesign</span>
+                </div>
+                <p class="footer__copy">&copy; 2026 Eldesign. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>

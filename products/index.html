@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter – Eldesign</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="circuit-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav nav--scrolled" id="nav">
+        <div class="nav__container">
+            <a href="../index.html" class="nav__logo">
+                <span class="nav__logo-icon">⚡</span>
+                <span class="nav__logo-text">eldesign</span>
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="../index.html#tjenester" class="nav__link">Tjenester</a></li>
+                <li><a href="../index.html#konsulent" class="nav__link">Konsulent</a></li>
+                <li><a href="index.html" class="nav__link" style="color: var(--accent);">Produkter</a></li>
+                <li><a href="../index.html#om-oss" class="nav__link">Om Oss</a></li>
+                <li><a href="../index.html#kontakt" class="nav__link nav__link--cta">Kontakt Oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header__grid-overlay"></div>
+        <div class="section__container">
+            <div class="page-header__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    <span class="hero__badge-text">Elektro Design Produkter</span>
+                </div>
+                <h1 class="page-header__title">Produkter</h1>
+                <p class="page-header__desc">Våre spesialtilpassede elektronikkprodukter for industrimarkedet</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Hjem</a>
+                    <span class="breadcrumb__sep">→</span>
+                    <span class="breadcrumb__current">Produkter</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-listing">
+        <div class="section__container">
+            <div class="products-grid" id="products-grid">
+                <!-- Populated by JS from PRODUCTS array -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="products-cta">
+        <div class="section__container">
+            <div class="products-cta__content">
+                <h2 class="products-cta__title">Trenger du en spesialtilpasset løsning?</h2>
+                <p class="products-cta__text">Vi utvikler også kundetilpassede elektronikkprodukter. Kontakt oss for å diskutere ditt prosjekt.</p>
+                <a href="../index.html#kontakt" class="btn btn--primary">
+                    <span class="btn__text">Kontakt Oss</span>
+                    <span class="btn__icon">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="nav__logo-icon">⚡</span>
+                    <span class="nav__logo-text">eldesign</span>
+                </div>
+                <p class="footer__copy">&copy; 2026 Eldesign. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>

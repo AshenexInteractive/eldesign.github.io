@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldesign – Produktutvikling</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Circuit Background -->
+    <canvas id="circuit-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__logo">
+                <span class="nav__logo-icon">⚡</span>
+                <span class="nav__logo-text">eldesign</span>
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="#tjenester" class="nav__link" data-text="Tjenester">Tjenester</a></li>
+                <li><a href="#konsulent" class="nav__link" data-text="Konsulent">Konsulent</a></li>
+                <li><a href="products/index.html" class="nav__link" data-text="Produkter">Produkter</a></li>
+                <li><a href="#utvikling" class="nav__link" data-text="Utvikling">Utvikling</a></li>
+                <li><a href="#om-oss" class="nav__link" data-text="Om Oss">Om Oss</a></li>
+                <li><a href="#kontakt" class="nav__link nav__link--cta" data-text="Kontakt Oss">Kontakt Oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__grid-overlay"></div>
+        <div class="hero__content">
+            <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                <span class="hero__badge-text">Produktutvikling & Elektronikkdesign</span>
+            </div>
+            <h1 class="hero__title">
+                <span class="hero__title-line hero__title-line--1">VI SKAPER</span>
+                <span class="hero__title-line hero__title-line--2">MORGENDAGENS</span>
+                <span class="hero__title-line hero__title-line--3">TEKNOLOGI</span>
+            </h1>
+            <p class="hero__description">
+                På veien fra idé til ferdig produkt velger Eldesign løsninger som gir kostnadseffektiv produksjon til riktig kvalitet.
+            </p>
+            <div class="hero__actions">
+                <a href="#kontakt" class="btn btn--primary">
+                    <span class="btn__text">Kontakt Oss</span>
+                    <span class="btn__icon">→</span>
+                </a>
+                <a href="#tjenester" class="btn btn--outline">
+                    <span class="btn__text">Våre Tjenester</span>
+                </a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <span class="hero__stat-number" data-count="5">0</span><span class="hero__stat-plus">+</span>
+                    <span class="hero__stat-label">Års Erfaring</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-number" data-count="6">0</span>
+                    <span class="hero__stat-label">Tjenester</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-number" data-count="3">0</span>
+                    <span class="hero__stat-label">Sektorer</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="tjenester">
+        <div class="section__container">
+            <div class="section__header">
+                <span class="section__number">01</span>
+                <span class="section__tag">Tjenester</span>
+                <h2 class="section__title">Levert av Eldesign</h2>
+                <div class="section__line"></div>
+            </div>
+            <div class="services__grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="12" width="48" height="40" rx="4"/>
+                            <path d="M20 28l6 6-6 6M30 40h14"/>
+                            <line x1="8" y1="22" x2="56" y2="22"/>
+                            <circle cx="14" cy="17" r="2"/><circle cx="20" cy="17" r="2"/><circle cx="26" cy="17" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Elektronikkprodukter</h3>
+                    <p class="service-card__desc">Design av spesialtilpasset elektronikkprodukter</p>
+                    <div class="service-card__line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M32 8v8M32 48v8M8 32h8M48 32h8"/>
+                            <circle cx="32" cy="32" r="16"/>
+                            <circle cx="32" cy="32" r="8"/>
+                            <path d="M15 15l6 6M43 43l6 6M15 49l6-6M43 21l6-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Prototype & Sertifisering</h3>
+                    <p class="service-card__desc">Prototypeproduksjon og produktsertifisering</p>
+                    <div class="service-card__line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="20" width="16" height="24" rx="2"/>
+                            <rect x="24" y="20" width="16" height="24" rx="2"/>
+                            <rect x="44" y="20" width="16" height="24" rx="2"/>
+                            <path d="M12 12v8M32 12v8M52 12v8M12 44v8M32 44v8M52 44v8"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Småserieproduksjon</h3>
+                    <p class="service-card__desc">Småserieproduksjon av elektronikkenheter</p>
+                    <div class="service-card__line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="32" cy="20" r="12"/>
+                            <path d="M20 36c0-2 4-4 12-4s12 2 12 4v4c0 2-4 4-12 4s-12-2-12-4v-4z"/>
+                            <path d="M16 48h32M24 54h16"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Rådgiving</h3>
+                    <p class="service-card__desc">Rådgiving og tilrettelegging for serieproduksjon</p>
+                    <div class="service-card__line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="8" width="48" height="48" rx="4"/>
+                            <path d="M8 20h48M20 8v48"/>
+                            <circle cx="36" cy="36" r="8"/>
+                            <path d="M42 42l8 8"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Kartlegging</h3>
+                    <p class="service-card__desc">Identifisering og kartlegging av maskiner og styringer</p>
+                    <div class="service-card__line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 56V16l16-8 16 8 16-8v40l-16 8-16-8-16 8z"/>
+                            <path d="M24 8v40M40 16v40"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Mapping</h3>
+                    <p class="service-card__desc">Utarbeidelse av produktkrav og spesifikasjon av løsninger</p>
+                    <div class="service-card__line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultant Section -->
+    <section class="consultant" id="konsulent">
+        <div class="section__container">
+            <div class="consultant__layout">
+                <div class="consultant__left">
+                    <span class="section__number">02</span>
+                    <span class="section__tag">Effektivt Samarbeid</span>
+                    <h2 class="section__title">Konsulent<br>Tjenester</h2>
+                    <div class="section__line"></div>
+                    <p class="consultant__text">
+                        Vi tilbyr administrerte og profesjonelle tjenester som fokuserer på å matche kundens krav til innovative teknologier. Vi hjelper deg hele veien fra idé til ferdig produkt.
+                    </p>
+                    <p class="consultant__cta-text">
+                        Ta kontakt med oss i dag for et uforpliktende tilbud.
+                    </p>
+                    <a href="#kontakt" class="btn btn--primary">
+                        <span class="btn__text">Kontakt Oss</span>
+                        <span class="btn__icon">→</span>
+                    </a>
+                </div>
+                <div class="consultant__right">
+                    <div class="consultant__card">
+                        <div class="consultant__card-number">01</div>
+                        <h3 class="consultant__card-title">Prototype Design</h3>
+                        <ul class="consultant__card-list">
+                            <li>Veien fra idé, konseptutvikling og videre til ferdig produkt</li>
+                            <li>Design av elektronikk, mekatronikk og kapslinger</li>
+                            <li>Utvikling og tilpasning av programvare (firmware)</li>
+                            <li>Sertifisering iht. relevante standarder</li>
+                            <li>Produksjon av prototyper</li>
+                        </ul>
+                    </div>
+                    <div class="consultant__card">
+                        <div class="consultant__card-number">02</div>
+                        <h3 class="consultant__card-title">Småserieproduksjon</h3>
+                        <ul class="consultant__card-list">
+                            <li>Produksjon</li>
+                            <li>Sammenstilling</li>
+                            <li>Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Section -->
+    <section class="development" id="utvikling">
+        <div class="section__container">
+            <div class="development__layout">
+                <div class="development__visual">
+                    <div class="development__circuit-board">
+                        <div class="circuit-node circuit-node--1"></div>
+                        <div class="circuit-node circuit-node--2"></div>
+                        <div class="circuit-node circuit-node--3"></div>
+                        <div class="circuit-node circuit-node--4"></div>
+                        <div class="circuit-node circuit-node--5"></div>
+                        <svg class="circuit-lines" viewBox="0 0 400 400">
+                            <path d="M50 200 L150 200 L150 100 L250 100" stroke="var(--accent)" stroke-width="2" fill="none" class="circuit-path"/>
+                            <path d="M50 300 L100 300 L100 200 L200 200 L200 300 L350 300" stroke="var(--accent-dim)" stroke-width="1.5" fill="none" class="circuit-path"/>
+                            <path d="M200 50 L200 150 L300 150 L300 250 L350 250" stroke="var(--accent)" stroke-width="2" fill="none" class="circuit-path"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="development__content">
+                    <span class="section__number">03</span>
+                    <span class="section__tag">Utvikling</span>
+                    <h2 class="section__title">Software &<br>Hardware</h2>
+                    <div class="section__line"></div>
+                    <p class="development__text">
+                        På veien fra idé til ferdig produkt velger Eldesign løsninger som gir kostnadseffektiv produksjon til riktig kvalitet.
+                    </p>
+                    <p class="development__text">
+                        Vi bruker alltid den nyeste teknologien som grunnmur, noe som gir kortere utviklingstid, lavere utviklingskostnader og mer funksjonalitet.
+                    </p>
+                    <a href="#kontakt" class="btn btn--primary">
+                        <span class="btn__text">Kontakt Oss</span>
+                        <span class="btn__icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section class="sectors" id="sektorer">
+        <div class="section__container">
+            <div class="section__header section__header--center">
+                <span class="section__tag">Vi dekker hele Norge</span>
+                <h2 class="section__title">Våre Sektorer</h2>
+                <div class="section__line section__line--center"></div>
+            </div>
+            <div class="sectors__grid">
+                <div class="sector-card">
+                    <div class="sector-card__number">01</div>
+                    <div class="sector-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="16" width="48" height="36" rx="4"/>
+                            <path d="M20 8h24M32 8v8"/>
+                            <path d="M20 32h24M20 40h16"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-card__title">Kommunale Enheter</h3>
+                    <div class="sector-card__tags">
+                        <span class="sector-tag">Tech</span>
+                        <span class="sector-tag">Industri</span>
+                    </div>
+                </div>
+                <div class="sector-card">
+                    <div class="sector-card__number">02</div>
+                    <div class="sector-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M32 8C18.7 8 8 18.7 8 32s10.7 24 24 24 24-10.7 24-24S45.3 8 32 8z"/>
+                            <path d="M24 32l6 6 12-12"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-card__title">Helsesektoren</h3>
+                    <div class="sector-card__tags">
+                        <span class="sector-tag">Helse</span>
+                        <span class="sector-tag">Offentlig</span>
+                    </div>
+                </div>
+                <div class="sector-card">
+                    <div class="sector-card__number">03</div>
+                    <div class="sector-card__icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M32 8l24 14v20L32 56 8 42V22L32 8z"/>
+                            <path d="M32 28v12M26 34h12"/>
+                        </svg>
+                    </div>
+                    <h3 class="sector-card__title">Energi</h3>
+                    <div class="sector-card__tags">
+                        <span class="sector-tag">IOT</span>
+                        <span class="sector-tag">Privat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="om-oss">
+        <div class="section__container">
+            <div class="about__layout">
+                <div class="about__profile">
+                    <span class="section__number">04</span>
+                    <span class="section__tag">Visjon og Misjon</span>
+                    <div class="about__profile-card">
+                        <div class="about__avatar">
+                            <div class="about__avatar-placeholder">TS</div>
+                        </div>
+                        <h3 class="about__name">Tommy Smith</h3>
+                        <p class="about__role">Mekatronikkingeniør</p>
+                        <p class="about__bio">
+                            Mekatronikkingeniør med bred teknisk kompetanse. Mer enn 5 års erfaring med IOT teknologi og medgründer i et oppstartsselskap. Hovedfokuset er å bistå industrien i den pågående digitale transformasjonen.
+                        </p>
+                    </div>
+                </div>
+                <div class="about__visions">
+                    <div class="about__vision-card">
+                        <div class="about__vision-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="24" cy="24" r="20"/>
+                                <circle cx="24" cy="24" r="12"/>
+                                <circle cx="24" cy="24" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__vision-title">Visjon</h3>
+                        <p class="about__vision-text">
+                            Vår visjon er å bli det første stedet folk tenker på når de har en ny produktidé. Vårt mål er å skape verdier og utvikle bærekraftige produkter.
+                        </p>
+                    </div>
+                    <div class="about__vision-card">
+                        <div class="about__vision-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 44l10-20 8 12 8-24 8 16 6-12"/>
+                                <circle cx="14" cy="24" r="3"/>
+                                <circle cx="22" cy="36" r="3"/>
+                                <circle cx="30" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__vision-title">Misjon</h3>
+                        <p class="about__vision-text">
+                            Eldesign produserer innovative, problemløsende, produserbare og unike produkter for et bredt spekter av kunder, fra nystartede gründere til globale selskaper.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="section__container">
+            <div class="contact__layout">
+                <div class="contact__info">
+                    <span class="section__number">05</span>
+                    <span class="section__tag">Vi løser dine problemer</span>
+                    <h2 class="section__title">Kontakt Oss</h2>
+                    <div class="section__line"></div>
+                    <p class="contact__text">
+                        Ta kontakt med oss i dag for et uforpliktende tilbud. Vi er klare til å hjelpe deg med ditt neste prosjekt.
+                    </p>
+                    <div class="contact__details">
+                        <div class="contact__detail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                                <path d="M3 8l9 6 9-6"/>
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            </svg>
+                            <span>kontakt@eldesign.io</span>
+                        </div>
+                        <div class="contact__detail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                                <circle cx="12" cy="9" r="2.5"/>
+                            </svg>
+                            <span>Norge</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form" id="contact-form">
+                    <div class="form__group">
+                        <label class="form__label" for="name">Name</label>
+                        <input class="form__input" type="text" id="name" name="name" required>
+                        <div class="form__line"></div>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__input" type="email" id="email" name="email" required>
+                        <div class="form__line"></div>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="message">Message</label>
+                        <textarea class="form__input form__textarea" id="message" name="message" rows="4" required></textarea>
+                        <div class="form__line"></div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <span class="btn__text">Send Forespørsel</span>
+                        <span class="btn__icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="nav__logo-icon">⚡</span>
+                    <span class="nav__logo-text">eldesign</span>
+                </div>
+                <p class="footer__copy">&copy; 2026 Eldesign. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

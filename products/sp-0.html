@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP-0 Mod D – Minimalspenningsrele – Eldesign</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="circuit-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav nav--scrolled" id="nav">
+        <div class="nav__container">
+            <a href="../index.html" class="nav__logo">
+                <span class="nav__logo-icon">⚡</span>
+                <span class="nav__logo-text">eldesign</span>
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="../index.html#tjenester" class="nav__link">Tjenester</a></li>
+                <li><a href="../index.html#konsulent" class="nav__link">Konsulent</a></li>
+                <li><a href="index.html" class="nav__link" style="color: var(--accent);">Produkter</a></li>
+                <li><a href="../index.html#om-oss" class="nav__link">Om Oss</a></li>
+                <li><a href="../index.html#kontakt" class="nav__link nav__link--cta">Kontakt Oss</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Header -->
+    <section class="page-header">
+        <div class="page-header__grid-overlay"></div>
+        <div class="section__container">
+            <div class="page-header__content">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    <span class="hero__badge-text">Rele</span>
+                </div>
+                <h1 class="page-header__title">Minimalspenningsrele</h1>
+                <p class="page-header__desc">SP-0 Mod D</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Hjem</a>
+                    <span class="breadcrumb__sep">→</span>
+                    <a href="index.html">Produkter</a>
+                    <span class="breadcrumb__sep">→</span>
+                    <span class="breadcrumb__current">SP-0 Mod D</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="section__container">
+            <div class="product-detail__layout">
+                <!-- Product Visual -->
+                <div class="product-detail__visual">
+                    <div class="product-visual-box">
+                        <div class="product-visual-box__icon">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="12" y="8" width="40" height="48" rx="4"/>
+                                <circle cx="32" cy="28" r="10"/>
+                                <path d="M28 28h8M32 24v8"/>
+                                <line x1="20" y1="44" x2="44" y2="44"/>
+                                <circle cx="26" cy="50" r="2"/><circle cx="32" cy="50" r="2"/><circle cx="38" cy="50" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="product-visual-box__grid"></div>
+                        <div class="product-visual-box__badge">Rele</div>
+                    </div>
+                    <div class="product-discount-badge">
+                        <span class="product-discount-badge__value">35%</span>
+                        <span class="product-discount-badge__label">RABATT</span>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail__info">
+                    <span class="section__tag">Minimalspenningsrele</span>
+                    <h2 class="section__title">SP-0 Mod D</h2>
+                    <div class="section__line"></div>
+
+                    <p class="product-detail__hero-desc">
+                        Minimalspenningsreleet brukes til forrigling av bryterstyringer i kraft- og transformatorstasjoner. Spenningsindikering på linjer/samleskinner.
+                    </p>
+
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <span class="product-feature__check">&#10003;</span>
+                            <span>Forrigling av bryterstyringer i kraft- og transformatorstasjoner</span>
+                        </div>
+                        <div class="product-feature">
+                            <span class="product-feature__check">&#10003;</span>
+                            <span>Spenningsindikering på linjer/samleskinner</span>
+                        </div>
+                    </div>
+
+                    <a href="../index.html#kontakt" class="btn btn--primary">
+                        <span class="btn__text">Be om Tilbud</span>
+                        <span class="btn__icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Description -->
+    <section class="product-tech">
+        <div class="section__container">
+            <div class="section__header">
+                <span class="section__number">01</span>
+                <span class="section__tag">Teknisk</span>
+                <h2 class="section__title">Beskrivelse</h2>
+                <div class="section__line"></div>
+            </div>
+
+            <div class="tech-blocks">
+                <div class="tech-block">
+                    <h3 class="tech-block__label">Inngangen</h3>
+                    <p class="tech-block__text">Består av en stjernekoblet tre-fasetransformator, etterfulgt av en likeretterbro. R4 og V9 begrenser spenningen til ca. 27 V = til den øvrige elektronikk. Releet K1 styres av komparatoren V17 som får inn referanse fra spenningsdeleren R12, R8.</p>
+                </div>
+                <div class="tech-block">
+                    <h3 class="tech-block__label">Målespenningen</h3>
+                    <p class="tech-block__text">Taes fra spenningsdeleren R5, R6. Denne er valgt, slik at komparatoren ikke kobler releet før innkoblingsspenningen er tilstrekkelig høy.</p>
+                </div>
+                <div class="tech-block">
+                    <h3 class="tech-block__label">Releet</h3>
+                    <p class="tech-block__text">Faller fra når spenningen etter R4 har kommet ned i 5-6 Volt. R1, R2 og R3 er varistor, som trer i funksjon ved ca. 330/600 V~, for henholdsvis 110/220 Voltutgaven.</p>
+                </div>
+            </div>
+
+            <div class="tech-callout">
+                <h3 class="tech-callout__title">Normal tilkobling og spenning på alle faser</h3>
+                <div class="tech-callout__specs">
+                    <div class="tech-callout__spec">
+                        <span class="tech-callout__dot"></span>
+                        Tiltrekking ca. 40/75 V~
+                    </div>
+                    <div class="tech-callout__spec">
+                        <span class="tech-callout__dot"></span>
+                        Frafall ca. 25/40 V~ for henholdsvis 110/220 V~ utgaven, målt på inngangen
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section class="product-specs">
+        <div class="section__container">
+            <div class="section__header">
+                <span class="section__number">02</span>
+                <span class="section__tag">Spesifikasjoner</span>
+                <h2 class="section__title">Elektrisk Spesifikasjon</h2>
+                <div class="section__line"></div>
+            </div>
+
+            <div class="specs-table">
+                <div class="specs-row">
+                    <span class="specs-row__label">Inngangsspenning</span>
+                    <span class="specs-row__value">110 V eller 220 V - 50/60 Hz</span>
+                </div>
+                <div class="specs-row">
+                    <span class="specs-row__label">Isolasjonstestet</span>
+                    <span class="specs-row__value">2,3 kV~ mellom utgang og inngang</span>
+                </div>
+                <div class="specs-row">
+                    <span class="specs-row__label">Omgivelsestemperatur</span>
+                    <span class="specs-row__value">-20° - +60°C</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Info -->
+    <section class="product-order">
+        <div class="section__container">
+            <div class="section__header">
+                <span class="section__number">03</span>
+                <span class="section__tag">Bestilling</span>
+                <h2 class="section__title">Ordreinformasjon</h2>
+                <div class="section__line"></div>
+            </div>
+
+            <div class="order-table">
+                <div class="order-table__header">
+                    <span>Art.nr.</span>
+                    <span>Type</span>
+                    <span>Montering</span>
+                </div>
+                <div class="order-table__row">
+                    <span class="order-table__code">19-000-14</span>
+                    <span>SP0 MOD.D 110V 50/60Hz</span>
+                    <span>DIN 35</span>
+                </div>
+                <div class="order-table__row">
+                    <span class="order-table__code">19-000-89</span>
+                    <span>SP0 MOD.D 220V 50/60Hz</span>
+                    <span>DIN 35</span>
+                </div>
+            </div>
+
+            <div class="order-cta">
+                <p>For bestillinger eller ytterligere spørsmål, vennligst send en e-post til <a href="mailto:eldesign@online.no" class="link--accent">eldesign@online.no</a> eller ring oss på <a href="tel:+4791332599" class="link--accent">913 32 599</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Products -->
+    <section class="other-products">
+        <div class="section__container">
+            <div class="section__header section__header--center">
+                <span class="section__tag">Se også</span>
+                <h2 class="section__title">Andre Produkter</h2>
+                <div class="section__line section__line--center"></div>
+            </div>
+            <div class="products-grid products-grid--small" id="other-products-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section__container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="nav__logo-icon">⚡</span>
+                    <span class="nav__logo-text">eldesign</span>
+                </div>
+                <p class="footer__copy">&copy; 2026 Eldesign. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>
